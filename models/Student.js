@@ -13,7 +13,7 @@ const studentSchema = new mongoose.Schema({
   },
 });
 
-personSchema.set("toJSON", {
+studentSchema.set("toJSON", {
   transform: function (document, returnedObject) {
     returnedObject.id = returnedObject._id;
     delete returnedObject._id;
